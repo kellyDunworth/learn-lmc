@@ -4,6 +4,8 @@
         "maziac.asm-code-lens",
         "yzhang.markdown-all-in-one",
         "bierner.markdown-mermaid",
-        "davidanson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "wraith13.open-in-github-desktop",
+        "eamodio.gitlens"
     ]
 }
