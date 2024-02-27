@@ -8,10 +8,16 @@ lbInput             INP             //Take user input
 
 lbTest              STA varAge
                     SUB valLower
-                    BRP lbIncrement
-                    BRA lbInput
+                    BRP lbTest2     // if 18 or over, continue to test2
+                    BRA lbInput     // if under 18, new input
 
-lbIncrement         LDA varAccepted
+lbTest2             LDA varAge
+                    SUB valUpper
+                    BRZ lbAddGuard
+                    BRP lbInput
+                                    // fall into next section of code ie add guard
+
+lbAddGuard          LDA varAccepted
                     ADD valOne
                     STA varAccepted
                     BRA lbInput
